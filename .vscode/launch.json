@@ -7,11 +7,11 @@
     {
       "type": "aws-sam",
       "request": "direct-invoke",
-      "name": "demo_export:HelloWorldFunction",
+      "name": "demo_export:ExportFunction (python3.8)",
       "invokeTarget": {
         "target": "template",
         "templatePath": "${workspaceFolder}/demo_export/template.yaml",
-        "logicalId": "HelloWorldFunction"
+        "logicalId": "ExportFunction"
       },
       "lambda": {
         "payload": {},
@@ -21,15 +21,15 @@
     {
       "type": "aws-sam",
       "request": "direct-invoke",
-      "name": "API demo_export:HelloWorldFunction",
+      "name": "API demo_export:ExportFunction (python3.8)",
       "invokeTarget": {
         "target": "api",
         "templatePath": "${workspaceFolder}/demo_export/template.yaml",
-        "logicalId": "HelloWorldFunction"
+        "logicalId": "ExportFunction"
       },
       "api": {
-        "path": "/hello",
-        "httpMethod": "get",
+        "path": "/export",
+        "httpMethod": "post",
         "payload": {
           "json": {}
         }
